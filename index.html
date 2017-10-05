@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="todoMonitor">
+  <head>
+    <title>AngularJS Todo List</title>
+  </head>
+
+  <body ng-controller="todoMonitorController as todoMonitor">
+    <h1>Todo List</h1>
+    <ul id="todo-list">
+      <li ng-repeat="task in todoMonitor.tasks track by $index">
+        {{task}}
+        <button ng-click="todoMonitor.deleteTask($index)">delete</button>
+      </li>
+    </ul>
+    <form ng-submit="todoMonitor.createTask()">
+      <input type="text" ng-model="todoMonitor.taskName">
+      <input type="submit">
+    </form>
+
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js">
+    </script>
+    <script src="app.js"></script>
+
+  </body>
+</html>
