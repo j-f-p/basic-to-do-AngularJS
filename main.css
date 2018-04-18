@@ -1,0 +1,20 @@
+ul#todo-list {
+  list-style-type: none;
+  padding-left: 0px;
+  max-width: 300px;
+}
+
+ul#todo-list li {
+  padding: 5px;
+}
+ul#todo-list li:hover {
+  background-color: whitesmoke;
+}
+
+ul#todo-list li span.delete {
+  float: right;
+  cursor: pointer;
+}
+ul#todo-list li span.delete:hover {
+  background-color: lightgrey;
+}

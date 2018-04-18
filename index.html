@@ -2,14 +2,16 @@
 <html ng-app="todoMonitor">
   <head>
     <title>AngularJS Todo List</title>
+    <link rel="stylesheet" href="main.css">
   </head>
 
   <body ng-controller="todoMonitorController as todoMonitor">
     <h1>Todo List</h1>
     <ul id="todo-list">
       <li ng-repeat="task in todoMonitor.tasks track by $index">
-        {{task}}
-        <button ng-click="todoMonitor.deleteTask($index)">delete</button>
+        <span>{{task}}</span>
+        <span ng-click="todoMonitor.deleteTask($index)" class="delete">
+          &nbsp;&#x00D7;&nbsp;</span>
       </li>
     </ul>
     <form ng-submit="todoMonitor.createTask()">
